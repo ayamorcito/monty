@@ -15,6 +15,7 @@ void push_func(FILE *file, char **elements, char *line, stack_t **head)
             fclose(file);
         }
     }
+    n = atoi(element);
     
     if (*head != NULL)
     {
