@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void main(char **filename, stack_t **stack, **elements)
+void main(char **filename, stack_t **stack)
 {
 	char *buffer = NULL;
 	char *line;
