@@ -18,6 +18,7 @@ void main(char **filename, stack_t **stack)
 		return;
 
 	}
+	str = strtok(line)
 
 	while ((read = getline(&buffer, &i, file)) != '\0')
 	{
