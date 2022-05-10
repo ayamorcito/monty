@@ -3,7 +3,7 @@
 void main(char **filename, stack_t **stack)
 {
 	char *buffer = NULL;
-	char *line;
+	char *line, *str;
 	size_t i = 0;
 	int check;
 	int read = 0;
