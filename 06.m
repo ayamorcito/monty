@@ -1,2 +1,2 @@
-pushsdasdasdasdsadsadsadasdsasad
-pint
+push 1
+pall
