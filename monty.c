@@ -11,7 +11,7 @@ void main(char **filename, stack_t **stack)
 
 	file = fopen("06.m", "r");
 
-	element = elements[1]
+	element = elements[1];
 
 	if (file == NULL)
 	{
