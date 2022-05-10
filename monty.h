@@ -37,6 +37,8 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+extern FILE *file;
+
 void push_func(FILE *file, char **elements, char *line, stack_t **head);
 
 
