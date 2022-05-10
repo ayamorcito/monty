@@ -19,7 +19,7 @@ void push_func(FILE *file, char **elements, char *line, stack_t **head)
     if (*head != NULL)
     {
         new->n = n;
-        *head->prev = new;
+        (*head)->prev = new;
         new->prev = NULL;
         new->next = *head;
         *head = new;
