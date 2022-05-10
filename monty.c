@@ -1,17 +1,15 @@
 #include "monty.h"
 
-void main(char **filename, stack_t **stack)
+void main(char **filename, stack_t **stack, **elements)
 {
 	char *buffer = NULL;
-	char *line, *element, elements;
+	char *line;
 	size_t i = 0;
 	int check;
 	int read = 0;
 	FILE *file; 
 
 	file = fopen("06.m", "r");
-
-	element = elements[1];
 
 	if (file == NULL)
 	{
