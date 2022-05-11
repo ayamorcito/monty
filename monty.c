@@ -19,10 +19,11 @@ void opfile(char *filename, stack_t **stack)
 	}
 	while ((read = getline(&buffer, &i, file)) != -1)
 	{
-		printf("%i\n", read);
-		return;
+				
 		str = strtok(buffer, "\n ");
-		if (str == NULL || str[0] == '\0')
+
+
+		if (str == NULL)
 		{
 			str_cn++;
 			continue;
