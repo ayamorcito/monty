@@ -20,7 +20,7 @@ void opfile(char *filename, stack_t **stack)
 	while ((read = getline(&buffer, &i, file)) != -1)
 	{
 				
-		str = strtok(buffer, "\n ");
+		str = strtok(buffer, " \t\n");
 
 		s = func_cheq(str);
 		if (s == NULL)
