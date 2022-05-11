@@ -1,28 +1,40 @@
 #include "monty.h"
 
-void main(char **filename, stack_t **stack)
+void opfile(char *filename, stack_t **stack)
 {
 	char *buffer = NULL;
-	char *line;
+	char *str;
 	size_t i = 0;
+	int str_cn = 1;
+	instruct_func s;
 	int check;
-	int read = 0;
-	FILE *file; 
-
-	file = fopen("06.m", "r");
-
+	int read;
+	FILE *file = fopen(filename, "r");
 
 	if (file == NULL)
 	{
-		printf("Error: Can't open file");
+		printf("Error: Can't open file %s\n", filename);
 		return;
-
 	}
-
-	while ((read = getline(&buffer, &i, file)) != '\0')
+	while ((read = getline(&buffer, &i, file)) != -1)
 	{
-		printf("%i\n", read);
-		return;
-	
+		str = strtok(buffer, "\n ");
+		if (str == NULL || str[0] == '\0')
+		{
+			str_cn++;
+			continue;
+		}
+		s = func_cheq(str);
+		if (s == NULL)
+		{
+			printf("L%d: unknown instruction %s\n", str_cn, str);
+			return;
+		}
+		s(stack, str_cn);
+		str_cn++;
 	}
+	free(buffer);
+	check = fclose(file);
+	if (check == -1)
+		exit(-1);
 }
