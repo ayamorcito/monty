@@ -9,7 +9,6 @@ void opfile(char *filename, stack_t **stack)
 	instruct_func s;
 	int check;
 	int read = 0;
-	FILE *file; 
 
 	FILE *file = fopen(filename, "r");
 
