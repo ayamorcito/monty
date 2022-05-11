@@ -4,7 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
+extern int sq_flag;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -37,11 +39,21 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern FILE *file;
-
-void push_func(FILE *file, char **elements, char *line, stack_t **head);
-
-
-
+typedef void (*instruct_func)(stack_t **stack, unsigned int line_number);
+instruct_func func_cheq(char *str);
+void _push(stack_t **stack, unsigned int line_number);
+void _pall(stack_t **stack, unsigned int line_number);
+void _pint(stack_t **stack, unsigned int line_number);
+void _add(stack_t **stack, unsigned int line_number);
+void _swap(stack_t **stack, unsigned int line_number);
+void _nop(stack_t **stack, unsigned int line_number);
+void _pop(stack_t **stack, unsigned int line_number);
+stack_t *add_dnodeint(stack_t **head, const int n);
+stack_t *add_dnodeint_end(stack_t **head, const int n);
+int delete_dnodeint_at_index(stack_t **head, unsigned int index);
+void free_stack(stack_t *head);
+void error_exit(stack_t **stack);
+int isnumber(char *str);
+void opfile(char *filename, stack_t **stack);
 
 #endif
