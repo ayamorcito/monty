@@ -20,6 +20,7 @@ instruct_func func_cheq(char *str)
 		{"add", _add},
 		{"nop", _nop},
 		{"sub", _sub},
+		{"div", _div},
 		{NULL, NULL},
 	};
 
