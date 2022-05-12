@@ -28,8 +28,12 @@ void opfile(char *filename, stack_t **stack)
 			fprintf(stderr, "L%d: unknown instruction %s\n", str_cn, str);
 			return;
 		}	
-
+		free(buffer);
+		buffer = NULL;
+		i = 0;
 		s(stack, str_cn);
 		str_cn++;
 	}
+	free(buffer);
+	fclose(file);
 }
