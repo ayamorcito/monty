@@ -21,3 +21,15 @@ void _add(stack_t **stack, unsigned int line_number)
 	runner->n = aux;
 	delete_dnodeint_at_index(stack, 1);
 }
+
+/**
+ * nop - does nothing
+ * @stack: pointer to stack
+ * @line_number: line number of instruction
+ * Return: void
+ */
+void _nop(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+}
