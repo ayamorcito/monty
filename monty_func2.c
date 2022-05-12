@@ -7,11 +7,18 @@
  */
 void _add(stack_t **stack, unsigned int line_number)
 {
-	if ((*stack)->next == NULL || (*stack)->next->next == NULL)
+	stack_t *runner = *stack;
+	int aux = 0;
+
+	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%u: scan't pint, stack empty\n", line_number);
 		error_exit(stack);
 	}
 
-	(*stack)->next->next->n += (*stack)->next->n;
+
+	aux = runner->n + runner->next->n;
+	runner->n = aux;
+	delete_dnodeint_at_index(stack, 0);
+
 }
