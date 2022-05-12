@@ -63,9 +63,16 @@ void _pall(stack_t **stack, __attribute__ ((unused))unsigned int line_number)
  * @line_number: number of line opcode occurs on
  *
  */
-void _pint(__attribute__ ((unused))stack_t **stack, __attribute__ ((unused))unsigned int line_number)
+void _pint(stack_t **stack, unsigned int count, char *line_number)
 {
-return;
+	if (*stack != NULL)
+		printf("%d\n", (*stack)->n);
+	else
+	{
+		free(line_number);
+		dprintf(2, "L%d: can't pint, stack empty\n", count);
+		exit(EXIT_FAILURE);
+	}
 }
 /**
  * _swap - swap top of stack and second top of stack

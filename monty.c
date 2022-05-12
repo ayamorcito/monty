@@ -27,7 +27,8 @@ void opfile(char *filename, stack_t **stack)
 		{
 			printf("L%d: unknown instruction %s\n", str_cn, str);
 			return;
-		}
+		}	
+
 		s(stack, str_cn);
 		str_cn++;
 	}
