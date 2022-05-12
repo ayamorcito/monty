@@ -13,16 +13,17 @@ int isnumber(char *str)
 	if (str == NULL)
 		return (0);
 	i = 0;
+
+	if (str[0] == '-')
+		i++;
+
 	while (str[i])
 	{
-		if (str[0] == '-')
-		{
+		if (str[i] >= 48 && str[i] <= 57)
 			i++;
-			continue;
-		}
-		if (!isdigit(str[i]))
+		
+		else
 			return (0);
-		i++;
 	}
 	return (1);
 }
