@@ -64,14 +64,13 @@ void _pall(stack_t **stack, __attribute__ ((unused))unsigned int line_number)
  * @line_number: number of line opcode occurs on
  *
  */
-void _pint(stack_t **stack, unsigned int count, char *line_number)
+void _pint(stack_t **stack, unsigned int line_number)
 {
 	if (*stack != NULL)
 		printf("%d\n", (*stack)->n);
 	else
 	{
-		free(line_number);
-		dprintf(2, "L%d: can't pint, stack empty\n", count);
+		fprintf(stderr, "L%u: scan't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 }
