@@ -12,10 +12,11 @@ void _sub(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
+		free_stack(stack);
 		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
 		error_exit(stack);
 	}
-
+	free(stack);
 	aux = runner->next->n - runner->n;
 	runner->n = aux;
 	delete_dnodeint_at_index(stack, 1);
