@@ -14,8 +14,8 @@ stack_t *add_dnodeint(stack_t **head, const int n)
 	nnode = malloc(sizeof(stack_t));
 	if (nnode == NULL)
 	{
-		fprinf(stderr, "Error: malloc failed\n");
-		error_exit(stack);
+		fprintf(stderr, "Error: malloc failed\n");
+		error_exit(head);
 	}
 
 
@@ -50,8 +50,8 @@ stack_t *add_dnodeint_end(stack_t **head, const int n)
 	
 	if (nnode == NULL)
         {
-		fprinf(stderr, "Error: malloc failed\n");
-		error_exit(stack);
+		fprintf(stderr, "Error: malloc failed\n");
+		error_exit(head);
         }
 
 	nnode->n = n;
