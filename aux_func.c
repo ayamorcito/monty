@@ -37,5 +37,6 @@ void error_exit(stack_t **stack)
 {
 	if (*stack)
 		free_stack(*stack);
+
 	exit(EXIT_FAILURE);
 }
