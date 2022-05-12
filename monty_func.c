@@ -4,29 +4,9 @@
  * @stack: linked lists for monty stack
  * @line_number: number of linei opcode occurs on
  */
+
 void _push(stack_t **stack, unsigned int line_number)
 {
-	stack_t *new = NULL;
-
-	new = malloc(sizeof(stack_t));
-	if (new == NULL)
-	{
-		fprintf(stderr, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
-	}
-	new->n = line_number;
-	new->next = NULL;
-	new->prev = NULL;
-	if (*stack == NULL)
-		*stack = new;
-	else
-	{
-		(*stack)->prev = new;
-		new->next = *stack;
-		*stack = new;
-	}
-}
-/*{
 	stack_t *new;
 	char *arg;
 	int push_arg;
@@ -60,7 +40,7 @@ void _push(stack_t **stack, unsigned int line_number)
 		add_dnodeint(stack, push_arg);
 	}
 
-}*/
+}
 
 /**
  * _pall - print all function
