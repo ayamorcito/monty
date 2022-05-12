@@ -12,7 +12,7 @@ void _add(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "L%u: scan't pint, stack empty\n", line_number);
+		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
 		error_exit(stack);
 	}
 
