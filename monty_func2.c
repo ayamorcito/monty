@@ -19,6 +19,5 @@ void _add(stack_t **stack, unsigned int line_number)
 
 	aux = runner->n + runner->next->n;
 	runner->n = aux;
-	delete_dnodeint_at_index(stack, 0);
-
+	delete_dnodeint_at_index(stack, 1);
 }
