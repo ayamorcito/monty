@@ -12,7 +12,7 @@ void _div(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		free_stack(stack, 1);
+		free(stack);
 		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
 		error_exit(stack);
 	}
@@ -20,7 +20,7 @@ void _div(stack_t **stack, unsigned int line_number)
     {
         if ((*stack)->n == 0)
         {
-        free_stack(stack, 1);
+        free(stack);
 		fprintf(stderr, "L%u: division by zero\n", line_number);
 		error_exit(stack);
         }
