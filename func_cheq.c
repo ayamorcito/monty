@@ -23,8 +23,10 @@ instruct_func func_cheq(char *str)
 	};
 
 	i = 0;
-	while (instruct[i].f != NULL && strcmp(instruct[i].opcode, str) != 0)
+	while (instruct[i].f != NULL) 
 	{
+		if (str != NULL && strcmp(instruct[i].opcode, str) == 0)
+			return (instruct[i].f);
 		i++;
 	}
 

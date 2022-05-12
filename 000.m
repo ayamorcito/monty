@@ -1,9 +1,8 @@
 push 1
-
-push 1 Push 1 onto the stack$
-
-
-
+push 3 Push 4 onto the stack$
+ 
+	
+	
 push 2 afdjvñkmfñsavlm
 
   push 3
