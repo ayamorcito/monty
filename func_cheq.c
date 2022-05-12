@@ -17,8 +17,8 @@ instruct_func func_cheq(char *str)
 		{"pint", _pint},
 		{"pop", _pop},
 		{"swap", _swap},
-	/*	{"add", _add},
-		{"nop", _nop}, */
+		{"add", _add},
+	/*	{"nop", _nop}, */
 		{NULL, NULL},
 	};
 

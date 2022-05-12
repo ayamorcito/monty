@@ -1,4 +1,5 @@
-push 1
+push -1-2
+
 push 3 Push 4 onto the stack$
  
 	
