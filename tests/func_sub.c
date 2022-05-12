@@ -10,6 +10,11 @@ void _sub(stack_t **stack, unsigned int line_number)
 	stack_t *runner = *stack;
 	int aux = 0;
 
+	if (aux < 0)
+	{
+		printf("es negativo");
+	}
+
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
@@ -17,10 +22,6 @@ void _sub(stack_t **stack, unsigned int line_number)
 	
 	aux = runner->n - runner->next->n;
 	runner->n = aux;
-	}
-	if (aux < 0)
-	{
-		printf("es negativo");
 	}
 
 	delete_dnodeint_at_index(stack, 1);
