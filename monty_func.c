@@ -19,7 +19,7 @@ void _push(stack_t **stack, unsigned int line_number)
 		error_exit(stack);
 	}*/
 
-	arg = strtok(NULL, "\n ");
+	arg = strtok(NULL, "\n\t ");
 
 	if (isnumber(arg) == 1 && arg != NULL)
 	{
@@ -71,7 +71,7 @@ void _pint(stack_t **stack, unsigned int line_number)
 		printf("%d\n", (*stack)->n);
 	else
 	{
-		fprintf(stderr, "L%u: scan't pint, stack empty\n", line_number);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
 		error_exit(stack);
 	}
 }
