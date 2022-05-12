@@ -14,7 +14,7 @@ int main(int ac, char **av)
 	if (ac != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
-		error_exit(&stack);
+		error_exit(stack);
 	}
 	opfile(av[1], &stack);
 	free_stack(stack);
