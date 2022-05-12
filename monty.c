@@ -22,6 +22,15 @@ void opfile(char *filename, stack_t **stack)
 				
 		str = strtok(buffer, " \t\n");
 
+		if (str == NULL)
+		{
+			free(buffer);
+			buffer = NULL;
+			i = 0;
+			str_cn++;
+			continue;
+		}
+
 		s = func_cheq(str);
 		if (s == NULL)
 		{
