@@ -19,7 +19,7 @@ void _push(stack_t **stack, unsigned int line_number)
 		error_exit(stack);
 	}*/
 
-	arg = strtok(NULL, "\n ");
+	arg = strtok(NULL, "\n\t ");
 
 	if (isnumber(arg) == 1 && arg != NULL)
 	{
