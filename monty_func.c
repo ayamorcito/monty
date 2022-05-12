@@ -27,7 +27,6 @@ void _push(stack_t **stack, unsigned int line_number)
 	}
 	else
 	{
-		free_stack(*stack);
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		error_exit(stack);
 	}
@@ -72,7 +71,6 @@ void _pint(stack_t **stack, unsigned int line_number)
 		printf("%d\n", (*stack)->n);
 	else
 	{
-		free_stack(*stack);
 		fprintf(stderr, "L%u: scan't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
